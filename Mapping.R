@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# GDP PER CAPITAL PPS OF EUROPE
+# GDP PER CAPITA PPS OF EUROPE
 # ------------------------------------------------------------------------------
 
 shp.europe <- readOGR(dsn = "/Users/SamuelAbacherli/Downloads/CNTR_RG_60M_2016_3857.shp/",
