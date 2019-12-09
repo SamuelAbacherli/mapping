@@ -2,7 +2,7 @@
 # GDP PER CAPITAL PPS OF EUROPE
 # ------------------------------------------------------------------------------
 
-shp.europe <- readOGR(dsn = "/Users/samu_hugo/Downloads/CNTR_RG_60M_2016_3857.shp/",
+shp.europe <- readOGR(dsn = "/Users/SamuelAbacherli/Downloads/CNTR_RG_60M_2016_3857.shp/",
                       layer = "CNTR_RG_60M_2016_3857")
 class(shp.europe)
 
@@ -10,14 +10,14 @@ sf.europe <- st_as_sf(shp.europe)
 class(sf.europe)
 head(sf.europe)
 
-df.gdp <- read.table(file='/Users/samu_hugo/Downloads/tec00114.tsv', sep = '\t', header = TRUE, fill = TRUE)
+df.gdp <- read.table(file='/Users/SamuelAbacherli/Downloads/tec00114.tsv', sep = '\t', header = TRUE, fill = TRUE)
 View(head(df.gdp))
 
 df.gdp$CNTR_ID <- df.gdp$na_item.ppp_cat.geo.time %>% 
   substr(nchar(as.character(df.gdp$na_item.ppp_cat.geo.time)) - 1, 
          nchar(as.character(df.gdp$na_item.ppp_cat.geo.time)))
 
-df.ec <- read.table(file='/Users/samu_hugo/Downloads/tec00013.tsv', sep = '\t', header = TRUE, fill = TRUE)
+df.ec <- read.table(file='/Users/SamuelAbacherli/Downloads/tec00013.tsv', sep = '\t', header = TRUE, fill = TRUE)
 head(df.ec)
 
 df.ec$CNTR_ID <- df.ec$na_item.unit.geo.time %>% 
